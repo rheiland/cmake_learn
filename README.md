@@ -18,6 +18,8 @@ cmake -DCMAKE_CXX_COMPILER=g++-7 -DCMAKE_C_COMPILER=gcc-7 ..
 Assuming the cmake is successful, you then just run:
 ```
 make
+# or if you encounter build errors, try:
+make VERBOSE=1
 ```
 On Windows 10, after installing Visual Studio 17 (VS17; free Community edition), I run a batch script (.bat) as follows:
 ```
