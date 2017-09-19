@@ -6,7 +6,9 @@ Usage:
 
 clone this repo, then (on OSX/Linux):
 ```
-cd <repo>/build
+cd <repo>
+mkdir build
+cd build
 cmake ..
 ```
 or if you want to specify different compilers than the default, use e.g.:
