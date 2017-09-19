@@ -75,7 +75,7 @@
 
 // custom user modules 
 
-#include "./custom_modules/biorobots.h" 
+#include "./custom_modules/mymodel.h" 
 	
 using namespace BioFVM;
 using namespace PhysiCell;

@@ -5,22 +5,12 @@ cmake_minimum_required (VERSION 3.5)
 project (PhysiCell)
 
 FIND_PACKAGE (OpenMP)
+if (OPENMP_FOUND)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+endif()
 
 #OPTION(BUILD_SHARED_LIBS "Build shared libraries" ON)
-
-#if (OPENMP_FOUND)
-#    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-#    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-#endif()
-
-# These will be default compilers, but can substitute others on command line.
-# e.g., if creating in ./build dir:
-# <path>/build$ cmake -DCMAKE_CXX_COMPILER=g++-7 -DCMAKE_C_COMPILER=gcc-7 ..
-set (CMAKE_C_COMPILER gcc)
-set (CMAKE_CXX_COMPILER g++)
-
-# in original Makefile, we specified:
-#set (CMAKE_CXX_FLAGS "-march=native -O3 -fomit-frame-pointer -mfpmath=both -fopenmp -m64 -std=c++11")
 
 set (CMAKE_CXX_STANDARD 11)
 # Not sure about this.
@@ -31,9 +21,6 @@ set (CMAKE_CXX_STANDARD 11)
 set (PhysiCell_VERSION_MAJOR 1)
 set (PhysiCell_VERSION_MINOR 2)
 set (PhysiCell_VERSION_PATCH 1)
-
-# should we use our own math functions
-#option(USE_MYMATH "Use tutorial provided math implementation" ON)
 
 # configure a header file to pass some of the CMake settings
 # to the source code
