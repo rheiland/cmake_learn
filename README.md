@@ -25,4 +25,8 @@ On Windows 10, after installing Visual Studio 17 (VS17; free Community edition),
 ```
 cmd.exe /k ""c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 & powershell"
 ```
-which seems to do some magic of making my Command Prompt shell know about the VS17 "cl" compiler (and put my Command Prompt into "Powershell" mode so I'll have more Unix-like commands). And then I run "cmake .." and "make".
+which seems to do some magic of making my Command Prompt shell know about the VS17 "cl" compiler (and put my Command Prompt into "Powershell" mode so I'll have more Unix-like commands). Then I run:
+```
+PS C:<path-to>\cmake_learn-master\build> cmake ..
+PS C:<path-to>\cmake_learn-master\build> cmake --build . --config Release
+```
