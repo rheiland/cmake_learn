@@ -33,7 +33,7 @@ which seems to do some magic of making my Command Prompt shell know about the VS
 PS C:<path-to>\cmake_learn-master> mkdir build
 PS C:<path-to>\cmake_learn-master> cd build
 PS C:<path-to>\cmake_learn-master\build> cmake ..
-  ... this will output stuff, hopefully no errors
+  ... this will generate files for the Visual Studio compiler; hopefully no errors.
 PS C:<path-to>\cmake_learn-master\build> cmake --build . --config Release
-  ... this will attempt to build the executable
+  ... this will attempt to compile & build the executable.
 ```
