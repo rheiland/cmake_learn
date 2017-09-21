@@ -4,7 +4,7 @@ Just as the repo name states, I'm trying to learn the basics of cmake.
 
 Usage:
 
-clone this repo, then (on OSX/Linux):
+clone or download/extract the .zip for this repo, then (on OSX/Linux):
 ```
 cd <repo>
 mkdir build
@@ -21,12 +21,19 @@ make
 # or if you encounter build errors, try:
 make VERBOSE=1
 ```
-On Windows 10, after installing Visual Studio 17 (VS17; free Community edition), I run a batch script (.bat) as follows:
+On Windows 10, after installing Visual Studio 17 (VS17; free Community edition), open a Command Prompt shell (or PowerShell) and:
+<!--
+I run a batch script (.bat) as follows:
 ```
 cmd.exe /k ""c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 & powershell"
 ```
 which seems to do some magic of making my Command Prompt shell know about the VS17 "cl" compiler (and put my Command Prompt into "Powershell" mode so I'll have more Unix-like commands). Then I run:
+-->
 ```
+PS C:<path-to>\cmake_learn-master> mkdir build
+PS C:<path-to>\cmake_learn-master> cd build
 PS C:<path-to>\cmake_learn-master\build> cmake ..
+  ... this will output stuff, hopefully no errors
 PS C:<path-to>\cmake_learn-master\build> cmake --build . --config Release
+  ... this will attempt to build the executable
 ```
