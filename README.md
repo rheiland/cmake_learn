@@ -25,7 +25,7 @@ make VERBOSE=1
 ```
 ## On Windows 10: 
 
-Installing [Visual Studio 17](https://www.visualstudio.com/downloads/) (I use the free Community edition), open a Command Prompt shell (or PowerShell) and:
+Install [Visual Studio 17](https://www.visualstudio.com/downloads/) (I use the free Community edition), open a Command Prompt shell (or PowerShell) and:
 <!--
 I run a batch script (.bat) as follows:
 ```
