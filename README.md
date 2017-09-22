@@ -25,7 +25,7 @@ make VERBOSE=1
 ```
 ## On Windows 10: 
 
-Install [Visual Studio 17](https://www.visualstudio.com/downloads/) (I use the free Community edition), open a Command Prompt shell (or PowerShell) and:
+Install [Visual Studio 17](https://www.visualstudio.com/downloads/) (I use the free Community edition). After this is successfully installed, open a Command Prompt shell (or PowerShell) and:
 <!--
 I run a batch script (.bat) as follows:
 ```
@@ -42,3 +42,10 @@ PS C:<path-to-repo>\build> cmake ..
 PS C:<path-to-repo>\build> cmake --build . --config Release
   ... this will attempt to compile & build the executable.
 ```
+Assuming it does indeed build successfully, then try to run the executable from a new subfolder:
+```
+PS C:<path-to-repo>\build> mkdir run1
+PS C:<path-to-repo>\build> cd run1
+PS C:<path-to-repo>\build\run1> ..\Release\PhysiCell.exe
+```
+
