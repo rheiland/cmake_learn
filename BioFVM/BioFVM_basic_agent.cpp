@@ -49,6 +49,7 @@
 #include "BioFVM_basic_agent.h"
 #include "BioFVM_agent_container.h"
 #include "BioFVM_vector.h" 
+#include "BioFVM_microenvironment.h" 
 
 namespace BioFVM{
 
@@ -72,9 +73,10 @@ Basic_Agent::Basic_Agent()
 	secretion_rates= new std::vector<double>(0);
 	uptake_rates= new std::vector<double>(0);
 	saturation_densities= new std::vector<double>(0);
-	extern Microenvironment* default_microenvironment;
+//	extern Microenvironment* default_microenvironment;
 	
-	register_microenvironment( default_microenvironment ); 
+//	register_microenvironment( default_microenvironment ); 
+	register_microenvironment( get_default_microenvironment() ); 
 
 	return;	
 }
