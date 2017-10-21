@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.5)
+cmake_minimum_required (VERSION 2.8)
 # actually, I have no idea what min version is req'd
 
 # put before COMPILER so we can subsitute compiler on command line.
